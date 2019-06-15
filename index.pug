@@ -12,7 +12,10 @@ html(lang="zn")
     head
         meta(charset="UTF-8") 
         title Document
+        link(rel="stylesheet", href="index.css")
     body
-    include nav.pug
-
-    +CreateBox("標題", "內容", "按鈕", "dog.jpg")
+        .main
+            include nav.pug
+            +CreateBox("標題", "內容", "按鈕", "dog1.jpg")
+            +CreateBox("標題2", "內容2", "按鈕2", "dog2.jpg")
+            +CreateBox("標題3", "內容3", "按鈕3", "dog3.jpg")
