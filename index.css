@@ -1,7 +1,9 @@
+/* 主要 */
 .main{
     width: 80%;
     margin: 0 auto; 
 }
+/* 盒子.圖片.標題.內文與按鈕 */
 .box{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -12,16 +14,38 @@
     width: 100%;
 }
 .box .picture img[src="dog1.jpg"]{
-    box-shadow: 0 5px 7px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     border: 18px solid white;
     width: 60%;
     transform: rotate(15deg); 
 }
 /* 標題 */
-
+.title {
+    text-align: center;
+}
 
 /* 價格 */
-priceBox div {
+.priceBox {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.priceBox h2 {
+    margin: 30px;
+} 
+.priceBox h3 {
+    margin: 20px;
+}
+.priceBox h3 span:nth-child(n+2) {
+    font-size: 20px;
+}
+.priceBox ul li {
+    margin: 10px 0;
+}
+.priceBox a {
+
+    margin: 10px 0;
+}
+.priceBox div {
     background-color:rgb(150,50,50);
     color: white;
     text-align: center;
@@ -42,22 +66,33 @@ background-color: #333;
 .priceBox .rpimium a {
     background-color: rgb(150,50,50);
 }
+.priceBox .basic ul li:nth-child(n+3), .priceBox .premium ul li:nth-child(n+5) {
+    text-decoration: line-through;
+    color: #999;
+}
 
 /*調整文字大小 */
-body{
+body {
     font-size: 24px;   
 }
-h1{
+h1 {
     font-size: 1.3em;
 }
-p{
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1.1em;
+}
+p {
     font-size: 0.7em;
     padding: 30px 0;
     color: #999;
 }
-a{
-    font-size: 1em;
+a {
+    font-size: 0.8em;
 }
+ff
 /* 按鈕 */
 .button{
     display: inline-block;
