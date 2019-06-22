@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="zn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="./Document_files/index.css">
+  </head>
+  <body>
+    <div class="main">
+      <link rel="stylesheet" href="./Document_files/nav.css">
+      <div class="nav"><span class="logo"><span class="bold">Dog</span>Life<span class="red">.</span></span>
+        <ul>
+          <li><a class="red" href="http://127.0.0.1:5500/#">首頁</a></li>
+          <li><a href="http://127.0.0.1:5500/#">關於</a></li>
+          <li><a href="http://127.0.0.1:5500/#">價格</a></li>
+          <li><a href="http://127.0.0.1:5500/#">聯絡</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="content">
+          <h1>我們愛狗</h1>
+          <p>我們是一群熱愛狗的人士，為了保護與關懷狗建立此網站。</p><a href="http://127.0.0.1:5500/#">詳閱</a>
+        </div>
+        <div class="picture"><img src="./Document_files/dog1.jpg"></div>
+      </div>
+      <div class="title">
+        <h1>歡迎來到我們的網站</h1>
+        <p>在我們的網站內，你可以找到跟寵物相關的資訊。</p>
+      </div>
+      <div class="box">
+        <div class="content">
+          <h1>快樂的寵物</h1>
+          <p>讓寵物擁有開心的生活空間與品質。</p><a href="http://127.0.0.1:5500/#">詳閱</a>
+        </div>
+        <div class="picture"><img src="./Document_files/dog2.jpg"></div>
+      </div>
+      <div class="box">
+        <div class="content">
+          <h1>寵物寫真</h1>
+          <p>我們提供寵物寫真服務，幫寵物拍得美美的，右邊這隻叫做學長嘉浤。</p><a href="http://127.0.0.1:5500/#">詳閱</a>
+        </div>
+        <div class="picture"><img src="./Document_files/dog3.jpg"></div>
+      </div>
+      <div class="title">
+        <h1>價格表</h1>
+        <p>我們網站提供三種付費服務，您可以根據自己的需求選擇。</p>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<div class="title">
+  <h1>價格表</h1>
+  <p>我們網站提供三種付費服務，您可以根據自己的需求選擇。</p>
+</div></body></html>
