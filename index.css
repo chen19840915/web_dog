@@ -108,3 +108,34 @@ ff
 .button:hover{
     background-color: #333;
 }
+/* 手機 */
+@media screen and (max-width:767px) {
+.box {
+    grid-template-columns: 100%;
+    text-align: center;
+} 
+.box .picture img[src="dog1.jpg"]{
+    margin-top: 50px;  
+    }
+.box .picture {
+    margin-top: 30px;
+}
+
+}
+/* 平板 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .box {
+        grid-template-columns: 100%;
+        text-align: center;  
+    }
+    .box .picture img[src="dog1.jpg"]{
+        margin-top: 100px;  
+        }
+    .box .picture {
+        margin-top: 50px;
+    }    
+    }
+/* 桌機 */
+@media screen and (max-width:767px) {
+
+}
