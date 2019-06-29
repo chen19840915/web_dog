@@ -1,14 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 /* 主要 */
 .main{
     width: 80%;
     margin: 0 auto; 
+    overflow: hidden;
 }
 /* 盒子.圖片.標題.內文與按鈕 */
 .box{
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-gap: 10px 10px;
-    margin: 98px 0;   
+    grid-gap: 10px 0;
+    margin: 60px 0;
+    height: 600px;
+    grid-template-areas: "left right";   
+}
+.box .left {
+    grid-area: left;
+    text-align: right;
+    padding-right: 10px;
+}
+.box .right {
+    grid-area: right;
+    text-align: left;
+    padding-left: 10px;
 }
 .box .picture img{
     width: 100%;
@@ -16,94 +34,170 @@
 .box .picture img[src="dog1.jpg"]{
     box-shadow: 0 5px 12px rgba(0,0,0,0.2);
     border: 18px solid white;
-    width: 60%;
+    width: 40%;
     transform: rotate(15deg); 
+    margin-left: 100px;
+    margin-top: 80px;
 }
+.box h1 {
+    font-size: 54px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.box p {
+    font-size: 24px;
+    color: #959595;
+    margin-bottom: 30px;
+    line-height: 2;
+.button {
+    display: inline-block;
+    width: 200px !important;
+    height: 60px !important;
+    line-height: 60px;
+    text-align: center;
+     background-color: indianred;
+    color: white;
+     border-radius: 60px !important;
+     text-decoration: none;
+    font-size: 20px;
+    }
+.button:hover {
+        background-color: #333333;
+    }
+       
 /* 標題 */
 .title {
     text-align: center;
+    margin: 30px 0;
 }
-
+.title p {
+    padding: 30px;
+    color: #959595;
+}
 /* 價格 */
-.priceBox {
+
+.price {
     display: grid;
     grid-template-columns: auto auto auto;
+    text-align:center;
+    color:white;
+    margin-bottom: 50px;
 }
-.priceBox h2 {
-    margin: 30px;
-} 
-.priceBox h3 {
-    margin: 20px;
+.price .icon, .price h2, .price h3 {
+    padding: 30px 0;
 }
-.priceBox h3 span:nth-child(n+2) {
+.price h3 {
+    font-size: 36px;
+}
+.price h3 span {
+    font-size: 20px;
+    padding-left: 10px;
+}
+.price ul {
+    list-style-position: inside;
+    list-style-image: url('check.png');
+    margin-bottom: 50px;
+    text-align: left;
+}
+.price ul li {
+    padding: 10px;
+}
+.price .pricePremium {
+    background-color: rgb(48, 44, 44);
+}
+.price a {
+    background-color: rgb(48, 44, 44);
+}
+.pricePremium a {
+    background-color: rgb(133, 43, 43);
+}
+.price a:hover {
+    background-color: rgb(38, 34, 34);
+}
+.pricePremium a:hover {
+    background-color: rgb(123, 33, 33);
+}
+.priceBasic ul li:nth-child(n+3), .pricePremium ul li:nth-child(n+5)  {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.contactBg {
+    background-color: #eee;
+    padding-bottom: 50px;
+}
+.contact {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80%;
+    margin: 0 auto;
+    color: #555;
+}
+.contact form {
+    padding: 0 30px;
+}
+.contact form label, .contact form input, .contact form textarea {
+    width: 100%;
+}
+.contact form label, .contact .contactMessage h3 {
+    display: inline-block;
+    margin: 10px 0;
     font-size: 20px;
 }
-.priceBox ul li {
-    margin: 10px 0;
+.contact form input, .contact form textarea {
+    border: 0.5px solid #ccc;
+    border-radius: 10px;
 }
-.priceBox a {
+.contact form input, .contact .contactMessage p {
+    height: 30px;
+}
+.contact form input[type="submit"] {
+    margin-top: 30px;
+}
 
-    margin: 10px 0;
+footer {
+    background-color: rgb(123, 33, 33);
+    padding: 100px 20px;
 }
-.priceBox div {
-    background-color:rgb(150,50,50);
+.footer {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    color: #ccc
+}
+.footer h3 {
     color: white;
-    text-align: center;
-    padding: 50px 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
-.priceBox div ul {
-list-style-image:url(check.png);
-list-style-position:inside;
-text-align:left;
+.footer ul li a {
+    color: #ccc;
 }
-
-.priceBox .rpimium {
-    background-color: #333;
+.footer ul {
+    list-style: none;
 }
-.priceBox a {
-background-color: #333;
+.footer ul li {
+    padding: 10px 0;
 }
-.priceBox .rpimium a {
-    background-color: rgb(150,50,50);
-}
-.priceBox .basic ul li:nth-child(n+3), .priceBox .premium ul li:nth-child(n+5) {
-    text-decoration: line-through;
-    color: #999;
-}
-
-/*調整文字大小 */
-body {
-    font-size: 24px;   
-}
-h1 {
-    font-size: 1.3em;
-}
-h2 {
-    font-size: 1.2em;
-}
-h3 {
-    font-size: 1.1em;
-}
-p {
-    font-size: 0.7em;
-    padding: 30px 0;
-    color: #999;
-}
-a {
-    font-size: 0.8em;
-}
-ff
-/* 按鈕 */
-.button{
+.footer .follow a {
     display: inline-block;
-    background-color: indianred;
-    width: 130px; 
-    height: 60px;
-    line-height: 60px;
+    width: 30px;
+    padding: 5px;
+}
+.footer .follow a img {
+    width: 100%;
+}
+hr {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 50px auto 0 auto;
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.3);
     text-align: center;
-    background-repeat: 60px;
-    color: white;
-    text-decoration: none;
+    margin-top: 50px;
 }
 .button:hover{
     background-color: #333;
